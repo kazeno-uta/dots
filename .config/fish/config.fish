@@ -6,4 +6,4 @@ if status is-interactive
 end
 zoxide init fish | source
 alias cd=z
-
+alias nv=nvim 
