@@ -1,14 +1,17 @@
 # Requirements
  - Hyprland
- - rofi-lbon-wayland
+ - wofi
  - waybar
  - hyprshot
  - hyprlock
  - hyprshade
- - hyprlock
  - hyprpicker
  - hyprcursor
  - kitty
  - Thunar
  - fish
+ - swaync
+ - uwufetch
+ - nwg-look
+ - 
 

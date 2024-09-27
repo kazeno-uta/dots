@@ -1,0 +1,10 @@
+{
+    "PluginRepo": true,
+    "BDFDB": true,
+    "ThemeRepo": true,
+    "BetterVolume": true,
+    "PermissionsViewer": true,
+    "ZeresPluginLibrary": false,
+    "NotificationSounds": true,
+    "WhoReacted": false
+}
