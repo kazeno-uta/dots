@@ -11,4 +11,5 @@
  - kitty
  - Thunar
  - fish
+ - uwsm
 
