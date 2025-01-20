@@ -6,7 +6,7 @@
 #: individual font faces and even specify special fonts for particular
 #: characters.
 
-# font_family      FiraCode
+font_family      FiraCode
 # bold_font        auto
 # italic_font      auto
 # bold_italic_font auto
@@ -949,7 +949,7 @@ font_features +cv02 +cv05 +cv09 +cv14 +ss04 +cv16 +cv31 +cv25 +cv26 +cv32 +cv28 
 
 #: }}}
 
-# Tab bar {{{
+Tab bar {{{
 
 tab_bar_edge bottom
 
@@ -1110,7 +1110,7 @@ tab_title_template {title}{' :{}:'.format(num_windows) if num_windows > 1 else '
 #: margins the default color is chosen to match the background color
 #: of the neighboring tab.
 
-# }}}
+}}}
 
 #: Color scheme {{{
 
@@ -1120,7 +1120,6 @@ tab_title_template {title}{' :{}:'.format(num_windows) if num_windows > 1 else '
 #: The foreground and background colors.
 
 background_opacity 0.75
-
 
 #: The opacity of the background. A number between zero and one, where
 #: one is opaque and zero is fully transparent. This will only work if
@@ -1172,7 +1171,7 @@ background_blur 0
 #: When background image is scaled, whether linear interpolation
 #: should be used.
 
-dynamic_background_opacity yes
+# dynamic_background_opacity no
 
 #: Allow changing of the background_opacity dynamically, using either
 #: keyboard shortcuts (increase_background_opacity and
@@ -1318,7 +1317,7 @@ dynamic_background_opacity yes
 #: background processes still using the terminal can fail silently
 #: because their stdout/stderr/stdin no longer work.
 
-# remote_control_password "cutekitty=w="
+remote_control_password "cutekitty=w="
 
 #: Allow other programs to control kitty using passwords. This option
 #: can be specified multiple times to add multiple passwords. If no
@@ -1353,7 +1352,7 @@ dynamic_background_opacity yes
 #: See rc_custom_auth <https://sw.kovidgoyal.net/kitty/remote-
 #: control/#rc-custom-auth> for details.
 
-# allow_remote_control no
+allow_remote_control password
 
 #: Allow other programs to control kitty. If you turn this on, other
 #: programs can control all aspects of kitty, including sending text
@@ -1693,7 +1692,7 @@ dynamic_background_opacity yes
 
 #: }}}
 
-# Keyboard shortcuts {{{
+Keyboard shortcuts {{{
   map ctrl+backspace send_text all \x17
 
 #: Keys are identified simply by their lowercase Unicode characters.
@@ -2075,7 +2074,7 @@ kitty_mod ctrl+shift
 
 #: }}}
 
-# Tab management {{{
+Tab management {{{
 
 #: Next tab
 
@@ -2138,7 +2137,7 @@ kitty_mod ctrl+shift
 #: rather than at the end of the tabs list, use::
 
 #:     map ctrl+t new_tab !neighbor [optional cmd to run]
-# }}}
+}}}
 
 #: Layout management {{{
 
@@ -2162,7 +2161,7 @@ kitty_mod ctrl+shift
 #: stack layout::
 
 #:     map ctrl+alt+z toggle_layout stack
-# }}}
+}}}
 
 #: Font sizes {{{
 
@@ -2460,7 +2459,7 @@ kitty_mod ctrl+shift
 
 #: }}}
 
-# }}}
+}}}
 
 
 
@@ -2468,11 +2467,3 @@ kitty_mod ctrl+shift
 # Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME
-
-
-# BEGIN_KITTY_FONTS
-font_family      family="FiraCode Nerd Font"
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-# END_KITTY_FONTS
