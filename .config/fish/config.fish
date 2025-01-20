@@ -10,4 +10,4 @@ alias betterdiscord="~/Downloads/BetterDiscord-Linux.AppImage"
 alias nv=nvim
 zoxide init fish | source
 alias cd=z
-alias maxwell="mpv 'https://www.youtube.com/watch?v=kOG0_qjKWEI' --loop=inf --fs"
+alias maxwell="mpv 'https://www.youtube.com/watch?v=kOG0_qjKWEI' --loop=inf --fs --mute"

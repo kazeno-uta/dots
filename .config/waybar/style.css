@@ -76,28 +76,25 @@
 
 #pulseaudio {
   color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
+  border-radius: 1rem;
   margin-left: 1rem;
+  padding-right : 2rem;
 }
 
 #custom-music {
   color: @mauve;
   border-radius: 0 1rem 1rem 0;
-  margin-right: 1rem;
-}
-
-#network {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
+  margin-left: -2rem;
 }
 
 #bluetooth {
     margin-right: 1rem;
+    margin-left: -1rem;
     border-radius: 0px 1rem 1rem 0px;
     color: @sapphire;
 }
 
 #tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left : 1rem;
 }
