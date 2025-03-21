@@ -16,3 +16,10 @@ alias mimir= "systemctl suspend"
 
 # Created by `pipx` on 2024-11-29 12:10:43
 set PATH $PATH /home/max/.local/bin
+
+# pnpm
+set -gx PNPM_HOME "/home/max/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
