@@ -37,8 +37,19 @@
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "   {:%d/%m/%Y}",
         "format": "   {:%H:%M:%S}",
+        "calendar": {
+              "mode": "month",
+              "format": {
+                    "months": "<span color='#ff6699'><b>{}</b></span>",
+                    "days": "<span color='#cdd6f4'><b>{}</b></span>",
+                      "weekdays": "<span color='#7CD37C'><b>{}</b></span>",
+                      "today": "<span color='#ffcc66'><b>{}</b></span>"
+                    }
+              },
         "interval":1
     },
+
+    
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon}",
