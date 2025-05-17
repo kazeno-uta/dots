@@ -1,4 +1,4 @@
-; thunar GtkAccelMap rc-file         -*- scheme -*-
+; Thunar GtkAccelMap rc-file         -*- scheme -*-
 ; this file is an automated accelerator map dump
 ;
 ; (gtk_accel_path "<Actions>/ThunarDetailsView/expandable-folders" "")
@@ -22,7 +22,7 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-ascending" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/toggle-split-view" "F3")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/copy-2" "<Primary>Insert")
-; (gtk_accel_path "<Actions>/ThunarActionManager/trash-delete" "Delete")
+(gtk_accel_path "<Actions>/ThunarActionManager/trash-delete" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-recent" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-configure-toolbar" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/forward" "<Alt>Right")
@@ -92,7 +92,6 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/zoom-in" "<Primary>plus")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/configure-columns" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/rename" "F2")
-; (gtk_accel_path "<Actions>/ThunarBookmarks/8126310037dee6ad0b76991d84c17297" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-location" "<Primary>l")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-as-compact-list" "<Primary>3")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-menu" "")
@@ -109,7 +108,7 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-statusbar" "")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/open-location" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/duplicate" "")
-; (gtk_accel_path "<Actions>/ThunarActionManager/trash-delete-2" "KP_Delete")
+(gtk_accel_path "<Actions>/ThunarActionManager/trash-delete-2" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/back-alt1" "BackSpace")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/create-folder" "<Primary><Shift>n")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-home" "<Alt>Home")
@@ -119,7 +118,7 @@
 ; (gtk_accel_path "<Actions>/ThunarStandardView/set-default-app" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/empty-trash" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/preferences" "")
-; (gtk_accel_path "<Actions>/ThunarActionManager/delete" "")
+(gtk_accel_path "<Actions>/ThunarActionManager/delete" "Delete")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-network" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-side-pane-tree" "<Primary>e")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-file-system" "")
