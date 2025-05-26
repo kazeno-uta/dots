@@ -1,0 +1,29 @@
+window {
+    border-width: 16px; /* Matches the corner thickness in your image */
+    border-style: solid;
+    border-color: #0D0D0D; /* Matches the center background */
+    border-image: url("/home/max/dots/.config/wofi/menu.png") 16 fill stretch;
+
+    /* Add a background layer to ensure the transparent parts blend */
+    background: repeating-linear-gradient(
+        to bottom,
+        #0D0D0D,
+        #0D0D0D 4px,
+        #0E0E0E 4px,
+        #0E0E0E 8px
+    );
+
+}
+
+#input {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+#input:focus {
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
