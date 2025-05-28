@@ -22,22 +22,20 @@ window {
     margin-right: 16px;
 }
 
-/* #entry {
-    margin-bottom: 8px;
-    border-width: 9px;
-    border-style: solid;
-    border-image: url("/home/max/dots/.config/wofi/button-unselect.png") 9 repeat;
-    height: 72px;
-} */
-
 #entry {
     margin-bottom: 8px;
+    min-height: 32px;
     border: none;
     background-image: url("/home/max/dots/.config/wofi/bg-button-unselect.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-color: transparent;
     border-radius: 0px;
+}
+
+#img{
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #entry:selected {
@@ -53,6 +51,11 @@ window {
     box-shadow: none; 
 }
 
+#text{
+    
+    margin-left: 16px;
+    margin-right: 16px;
+}
 
 #input {
     background-color: transparent;
