@@ -2,7 +2,7 @@ window {
     border-width: 16px;
     border-style: solid;
     border-color: #0C0C0C;
-    border-image: url("/home/max/dots/.config/wofi/menu.png") 16 stretch repeat;
+    border-image: url("/home/max/.config/wofi/menu.png") 16 stretch repeat;
 
     background: repeating-linear-gradient(
         to bottom,
@@ -13,10 +13,44 @@ window {
     );
 
     font-family: "PixelHallfeticaJP10P", monospace;
+    color: white;
 }
 
 #scroll{
-    margin-bottom: 3px;
+    margin-bottom: 4px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+/* #entry {
+    margin-bottom: 8px;
+    border-width: 9px;
+    border-style: solid;
+    border-image: url("/home/max/dots/.config/wofi/button-unselect.png") 9 repeat;
+    height: 72px;
+} */
+
+#entry {
+    margin-bottom: 8px;
+    border: none;
+    background-image: url("/home/max/dots/.config/wofi/bg-button-unselect.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+#entry:selected {
+    margin-bottom: 8px;
+    border: none; 
+    background-image: url("/home/max/dots/.config/wofi/bg-button-select.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border-radius: 0px;
+    color: white; 
+    outline: none; 
+    box-shadow: none; 
 }
 
 
