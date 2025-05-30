@@ -1,0 +1,75 @@
+window {
+    border-width: 16px;
+    border-style: solid;
+    border-color: #0C0C0C;
+    border-image: url("/home/max/.config/wofi/menu.png") 16 stretch repeat;
+
+    background: repeating-linear-gradient(
+        to bottom,
+        #0C0C0C,
+        #0C0C0C 4px,
+        #181818 4px,
+        #181818 8px
+    );
+
+    font-family: "PixelHallfeticaJP10P", monospace;
+    color: white;]
+    min-width: 2397px;
+}
+
+#scroll{
+    margin-bottom: 4px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#entry {
+    margin-bottom: 8px;
+    min-height: 32px;
+    width: calc(100% - 32px); /* Adjust width to fit within the window, accounting for margins */
+    max-width: 100%; /* Ensure it doesn't exceed the window width */
+    border: none;
+    background-image: url("/home/max/dots/.config/wofi/bg-button-unselect.png");
+    background-repeat: no-repeat;
+    background-size: contain; /* Keep the image contained within the entry */
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+#img{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#entry:selected {
+    margin-bottom: 8px;
+    min-height: 32px;
+    border: none;
+    background-image: url("/home/max/dots/.config/wofi/bg-button-select.png");
+    background-repeat: no-repeat;
+    background-size: contain; /* Keep the image contained within the entry */
+    background-color: transparent;
+    border-radius: 0px;
+    color: white; 
+    outline: none; 
+    box-shadow: none; 
+}
+
+#text{
+    
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#input {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border: none;
+}
+
+#input:focus {
+    box-shadow: none;
+    outline: none;
+    border: none;
+}

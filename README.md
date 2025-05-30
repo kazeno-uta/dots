@@ -12,4 +12,4 @@
  - Thunar
  - fish
  - uwsm
-
+ - fd
