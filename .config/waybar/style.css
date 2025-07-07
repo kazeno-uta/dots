@@ -1,7 +1,8 @@
 @import "mocha.css";
 
 * {
-  font-family: FantasqueSansMono Nerd Font;
+  /* font-family: FantasqueSansMono Nerd Font; */
+  font-family: "PixelHallfeticaJP10P", monospace;
   font-size: 17px;
   min-height: 0;
 }

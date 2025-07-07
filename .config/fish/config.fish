@@ -4,6 +4,21 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+function arch_news_check
+    echo "🔔 Latest Arch Linux news:"
+    curl -s https://archlinux.org/news/ | grep -Eo 'href="/news/[^"]+"' | cut -d'"' -f2 | head -n 5 | sed 's|^|https://archlinux.org|'
+
+    echo
+    read -l -P "Do you want to continue with the system upgrade? [y/N] " answer
+    if test "$answer" = y -o "$answer" = Y
+        yay
+    else
+        echo "⏹️ Upgrade cancelled."
+    end
+end
+
+alias pacnews="arch_news_check"
+
 alias off="shutdown now"
 alias :q=exit
 alias betterdiscord="~/Downloads/BetterDiscord-Linux.AppImage"
