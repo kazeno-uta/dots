@@ -13,5 +13,5 @@
  - swaync
  - uwufetch
  - nwg-look
- - 
+ - tumbler
 
