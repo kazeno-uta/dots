@@ -13,7 +13,8 @@ window {
     );
 
     font-family: "PixelHallfeticaJP10P", monospace;
-    color: white;
+    color: white;]
+    min-width: 2397px;
 }
 
 #scroll{
@@ -25,10 +26,12 @@ window {
 #entry {
     margin-bottom: 8px;
     min-height: 32px;
+    width: calc(100% - 32px); /* Adjust width to fit within the window, accounting for margins */
+    max-width: 100%; /* Ensure it doesn't exceed the window width */
     border: none;
-    background-image: url("/home/max/dots/.config/wofi/bg-button-unselect.png");
+    background-image: url("/home/max/dots/.config/wofi/bg-button-unselect-1080.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; /* Keep the image contained within the entry */
     background-color: transparent;
     border-radius: 0px;
 }
@@ -40,10 +43,11 @@ window {
 
 #entry:selected {
     margin-bottom: 8px;
-    border: none; 
-    background-image: url("/home/max/dots/.config/wofi/bg-button-select.png");
+    min-height: 32px;
+    border: none;
+    background-image: url("/home/max/dots/.config/wofi/bg-button-select-1080.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; /* Keep the image contained within the entry */
     background-color: transparent;
     border-radius: 0px;
     color: white; 
