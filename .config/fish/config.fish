@@ -19,7 +19,7 @@ end
 
 alias pacnews="arch_news_check"
 
-alias off="shutdown now"
+alias off="ddcutil --bus 8 setvcp D6 4 & ddcutil --bus 5 setvcp D6 5 & wait && shutdown now"
 alias :q=exit
 alias betterdiscord="~/Downloads/BetterDiscord-Linux.AppImage"
 alias nv=nvim
