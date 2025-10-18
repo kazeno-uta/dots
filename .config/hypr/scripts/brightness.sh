@@ -19,25 +19,23 @@ MONITOR_INFO=$(hyprctl monitors -j | jq -r --arg x "$CUR_X" --arg y "$CUR_Y" '
 ')
 
 # Parse name
-read -r MON_NAME <<< "$MONITOR_INFO"
+read -r MON_NAME <<<"$MONITOR_INFO"
 
 # change brightness of current screen
 if [[ "$MON_NAME" == "DP-3" ]]; then
-	bus=8
+  bus=8
 
 elif [[ "$MON_NAME" == "HDMI-A-1" ]]; then
-	bus=5
+  bus=5
 fi
 
 #get current value
-output=$(ddcutil --bus 5 getvcp 10)
+output=$(ddcutil --bus $bus getvcp 10)
 
-read -r _ _ _ _ _ _ _ _ current _ _ _ max <<< "$output"
+read -r _ _ _ _ _ _ _ _ current _ _ _ max <<<"$output"
 
-current=`echo $current | sed 's/.\{1\}$//'`
+current=$(echo $current | sed 's/.\{1\}$//')
 
-if ([ $current -gt 0 ] && [ $1 = "-" ]) || ([ $current -lt 100 ]&&[ $1 = "+" ]); then
+if ([ $current -gt 0 ] && [ $1 = "-" ]) || ([ $current -lt 100 ] && [ $1 = "+" ]); then
   ddcutil --bus $bus setvcp 10 $@
 fi
-
-

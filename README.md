@@ -14,4 +14,5 @@
  - uwufetch
  - nwg-look
  - tumbler
+ - socat
 
