@@ -20,6 +20,7 @@ set PATH $PATH /home/max/.local/bin
 # pnpm
 set -gx PNPM_HOME "/home/max/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
+echo -e "\e[31m!!!! Changer le timeout sudo !!!!\e[0m"
 # pnpm end
