@@ -25,6 +25,8 @@ alias nv=nvim
 zoxide init fish | source
 alias cd=z
 alias maxwell="mpv 'https://www.youtube.com/watch?v=kOG0_qjKWEI' --loop=inf --fs --mute"
+alias connect.sh="Cours/4A/devsecops/connect.sh"
 
 # Created by `pipx` on 2025-03-05 21:21:47
 set PATH $PATH /home/max/.local/bin
+fnm env --use-on-cd | source
