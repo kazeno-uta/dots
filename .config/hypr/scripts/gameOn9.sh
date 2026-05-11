@@ -2,13 +2,13 @@ windowId=""
 handle() {
   case $1 in
   openwindow*',9,'*)
+    notify-send "moving zen to workspace 9"
     windowId="${1#*>>}"        # remove 'openwindow>>'
     windowId="${windowId%%,*}" # remove everything after first comma
-    hyprctl dispatch movetoworkspacesilent 2, class:zen
-    ;;
+    hyprctl dispatch 'hl.dsp.window.move({ workspace = "2", follow = false, window = "class:zen" })'    ;;
 
   closewindow*"$windowId")
-    hyprctl dispatch movetoworkspace 1, class:zen
+    hyprctl dispatch 'hl.dsp.window.move({ workspace = "1", window = "class:zen" })'
     ;;
   esac
 }

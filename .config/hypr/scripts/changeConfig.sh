@@ -3,11 +3,11 @@
 function handle
   switch $argv[1] 
     case 'activelayout>>keychron-keychron-k8-*'
-      cp ~/.config/hypr/classic.binds ~/.config/hypr/binds.conf && hyprctl reload
+      cp ~/.config/hypr/classic.binds.lua ~/.config/hypr/binds.lua && hyprctl reload
       notify-send "changed config for standard keyboards"
 
     case 'activelayout>>pandakb.com-lily58-rgb,*'
-      cp ~/.config/hypr/split.binds ~/.config/hypr/binds.conf && hyprctl reload
+      cp ~/.config/hypr/split.binds.lua ~/.config/hypr/binds.lua && hyprctl reload
       notify-send "changed config for split keyboards"
   end
 end
