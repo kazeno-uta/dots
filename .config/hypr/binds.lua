@@ -15,8 +15,8 @@ hl.bind("CTRL + SHIFT + Zenkaku_Hankaku", hl.dsp.exec_cmd("uwsm app -- gnome-sys
 hl.bind("SUPER + Q", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + C", hl.dsp.window.close())
 hl.bind("SUPER + ALT + C", hl.dsp.exec_cmd("hyprctl kill"))
-hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("uwsm app -- hyprpicker -a"))
-hl.bind("SUPER + E", hl.dsp.exec_cmd("uwsm app -- thunar"))
+hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a"))
+hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("SUPER + SHIFT + V", hl.dsp.window.float({ action = "toggle" }))
 
 hl.bind(
@@ -33,9 +33,9 @@ hl.bind(
 	hl.dsp.exec_cmd("uwsm app -- sh -c 'cliphist list | " .. menu .. " --dmenu -b -I | cliphist decode | wl-copy'")
 )
 
-hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("uwsm app -- pkill waybar && waybar"))
+hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("pkill waybar && uwsm app -- waybar"))
 
-hl.bind("SUPER + ALT + N", hl.dsp.exec_cmd("uwsm app -- hyprsunset -t 2500"))
+hl.bind("SUPER + ALT + N", hl.dsp.exec_cmd("uwsm app -- hyprsunset -t 3500"))
 hl.bind("SUPER + ALT + SHIFT + N", hl.dsp.exec_cmd("uwsm app -- pkill hyprsunset"))
 
 hl.bind("SUPER + F", hl.dsp.exec_cmd("uwsm app -- zen-browser"))

@@ -1,8 +1,7 @@
 @import "mocha.css";
 
 * {
-  /* font-family: FantasqueSansMono Nerd Font; */
-  font-family: "PixelHallfeticaJP10P", monospace;
+  font-family: FantasqueSansMono Nerd Font;
   font-size: 17px;
   min-height: 0;
 }
@@ -51,7 +50,7 @@
 
 #clock {
   color: @blue;
-  border-radius: 1rem;
+  border-radius: 1rem 1rem 1rem 1rem;
   margin-right: 1rem;
 }
 
@@ -71,31 +70,39 @@
   color: @yellow;
 }
 
-#backlight, #battery {
+#backlight {
     border-radius: 0;
+}
+
+#battery{
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
 }
 
 #pulseaudio {
   color: @maroon;
-  border-radius: 1rem;
+  border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;
-  padding-right : 2rem;
 }
 
-#custom-music {
+#custom-music, #cava {
   color: @mauve;
-  border-radius: 0 1rem 1rem 0;
-  margin-left: -2rem;
+}
+
+#network {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @lavender;
 }
 
 #bluetooth {
     margin-right: 1rem;
-    margin-left: -1rem;
     border-radius: 0px 1rem 1rem 0px;
-    color: @sapphire;
+    color: @lavender;
 }
 
 #tray {
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left : 1rem;
+  border-radius: 0rem 0px 0px 0rem ;
+}
+#custom-music {
+  border-radius: 1rem 0px 0px 1rem ;
 }

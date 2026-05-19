@@ -14,21 +14,21 @@
 ------------------
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
+local main="HDMI-A-2"
+local second = "eDP-1"
 hl.monitor({
-	output = "DP-3",
-	mode = "preferred",
-	position = "0x0",
-	scale = 1,
-	transform = 0,
-})
-
-hl.monitor({
-	output = "HDMI-A-1",
+	output = second,
 	mode = "preferred",
 	position = "auto",
 	scale = 1,
 	transform = 0,
-	-- mirror = "DP-3"
+})
+hl.monitor({
+	output = main,
+	mode="prefered",
+	position = "0x0",
+	scale = 1,
+	transform = 0,
 })
 
 ---------------------
@@ -55,19 +55,12 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("zen-browser & steam")
 	hl.exec_cmd("vesktop")
 	hl.exec_cmd("udiskie")
-	hl.exec_cmd("/opt/Deezer Discord RPC/deezer-discord-rpc")
+	hl.exec_cmd("deezer-desktop && discord")
 
 	hl.exec_cmd("uwsm app -- dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
 	-- hl.exec_cmd("uwsm app -- wl-paste --type text --watch cliphist store #Stores only text data & uwsm app -- wl-paste --type image --watch cliphist store #Stores only image data")
 	--
-	-- if possible on exec once
-	hl.exec_cmd(
-		"hyprsunset -t 2500 & swww img --transition-type wipe --transition-angle 30 --transition-step 90 ~/wallpaper/crosscode2.gif --transition-fps 60"
-	)
-	hl.exec_cmd(
-		"~/.config/hypr/scripts/gameOn9.sh & ~/.config/hypr/scripts/geo.sh & ~/.config/hypr/scripts/changeConfig.sh"
-	)
 end)
 
 -------------------------------
@@ -295,14 +288,8 @@ hl.gesture({
 -- Example per-device config
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Devices/ for more
 hl.device({
-	name = "epic-mouse-v1",
-	sensitivity = -0.5,
-})
-
-hl.device({
-	name = "wacom-one-by-wacom-s-pen",
-	left_handed = true,
-	output = "DP-3",
+	name = "logitech-g502-hero-gaming-mouse",
+	sensitivity = 0.5,
 })
 
 ---------------------
@@ -444,22 +431,11 @@ local eldenRingUnfocusedRule = hl.window_rule({
 local workspace1OnMainRule = hl.workspace_rule({
 	workspace = "1",
 
-	monitor = "DP-3",
-})
-
-local workspace9OnMainRule = hl.workspace_rule({
-	workspace = "9",
-
-	monitor = "DP-3",
+	monitor = main,
 })
 
 local workspace2OnSecondaryRule = hl.workspace_rule({
 	workspace = "2",
 
-	monitor = "HDMI-A-1",
-})
-local workspace10OnSecondaryRule = hl.workspace_rule({
-	workspace = "10",
-
-	monitor = "HDMI-A-1",
+	monitor = second,
 })

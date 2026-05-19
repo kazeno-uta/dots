@@ -15,8 +15,8 @@ hl.bind("CTRL + SHIFT + Zenkaku_Hankaku", hl.dsp.exec_cmd("uwsm app -- gnome-sys
 hl.bind("SUPER + Q", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + C", hl.dsp.window.close())
 hl.bind("SUPER + ALT + C", hl.dsp.exec_cmd("hyprctl kill"))
-hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("uwsm app -- hyprpicker -a"))
-hl.bind("SUPER + E", hl.dsp.exec_cmd("uwsm app -- thunar"))
+hl.bind("SUPER + SHIFT + C", hl.dsp.exec_cmd("hyprpicker -a"))
+hl.bind("SUPER + E", hl.dsp.exec_cmd("thunar"))
 hl.bind("SUPER + SHIFT + V", hl.dsp.window.float({ action = "toggle" }))
 
 hl.bind(
@@ -33,12 +33,12 @@ hl.bind(
 	hl.dsp.exec_cmd("uwsm app -- sh -c 'cliphist list | " .. menu .. " --dmenu -b -I | cliphist decode | wl-copy'")
 )
 
-hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("uwsm app -- pkill waybar && waybar"))
+hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("pkill waybar && uwsm app -- waybar"))
 
-hl.bind("SUPER + ALT + N", hl.dsp.exec_cmd("uwsm app -- hyprsunset -t 2500"))
-hl.bind("SUPER + ALT + SHIFT + N", hl.dsp.exec_cmd("uwsm app -- pkill hyprsunset"))
+hl.bind("SUPER + ALT + N", hl.dsp.exec_cmd("uwsm app -- hyprsunset -t 3500"))
+hl.bind("SUPER + ALT + SHIFT + N", hl.dsp.exec_cmd("pkill hyprsunset"))
 
-hl.bind("SUPER + F", hl.dsp.exec_cmd("uwsm app -- zen-browser"))
+hl.bind("SUPER + F", hl.dsp.exec_cmd("zen-browser"))
 hl.bind("SUPER + SHIFT + F", hl.dsp.window.fullscreen())
 
 hl.bind("SUPER + left", hl.dsp.focus({ direction = "left" }))
@@ -69,7 +69,7 @@ hl.bind("SUPER + SHIFT + left", hl.dsp.window.resize({ x = -100, y = 0, relative
 hl.bind("SUPER + SHIFT + up", hl.dsp.window.resize({ x = 0, y = -100, relative = true }))
 hl.bind("SUPER + SHIFT + down", hl.dsp.window.resize({ x = 0, y = 100, relative = true }))
 
-hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd("uwsm app -- swaync-client -t -sw"))
+hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
 hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("uwsm app -- ~/.config/hypr/scripts/brightness.sh + 5 &"), {
 	locked = true,
@@ -109,8 +109,3 @@ hl.bind(
 		'kitty --config ~/.config/kitty/dropdown.conf -o allow_remote_control=yes --class=kitty-dropdown --title=kitty-dropdown env XDG_CONFIG_HOME=/tmp/empty fish --init-command "source ~/.config/fish/empty.fish"'
 	)
 )
--- no worky
-hl.bind("SUPER + ALT + CTRL + down", hl.dsp.exec_cmd("hyprctl keyword monitor DP-3,preferred,0x0,1,transform,0"))
-hl.bind("SUPER + ALT + CTRL + right", hl.dsp.exec_cmd("hyprctl keyword monitor DP-3,preferred,0x0,1,transform,1"))
-hl.bind("SUPER + ALT + CTRL + up", hl.dsp.exec_cmd("hyprctl keyword monitor DP-3,preferred,0x0,1,transform,2"))
-hl.bind("SUPER + ALT + CTRL + left", hl.dsp.exec_cmd("hyprctl keyword monitor DP-3,preferred,0x0,1,transform,2"))
