@@ -71,11 +71,11 @@ hl.bind("SUPER + SHIFT + down", hl.dsp.window.resize({ x = 0, y = 100, relative 
 
 hl.bind("SUPER + SHIFT + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("uwsm app -- ~/.config/hypr/scripts/brightness.sh + 5 &"), {
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl set +5%"), {
 	locked = true,
 	repeating = true,
 })
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("uwsm app -- ~/.config/hypr/scripts/brightness.sh - 5 &"), {
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl set 5%-"), {
 	locked = true,
 	repeating = true,
 })

@@ -1,6 +1,6 @@
 if status is-interactive
-    uwufetch
-    hyprctl splash | cowsay -f dragon-and-cow
+    pfetch
+    hyprctl splash
     # Commands to run in interactive sessions can go here
 end
 

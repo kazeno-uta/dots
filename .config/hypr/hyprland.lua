@@ -82,6 +82,7 @@ hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("GTK_IM_MODULE", "fcitx")
 hl.env("QT_IM_MODULE", "fcitx")
 hl.env("XMODIFIERS", "@im=fcitx")
+hl.env("TERMINAL","kitty")
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
