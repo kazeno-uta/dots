@@ -1,5 +1,6 @@
 if status is-interactive
     pfetch
+    set fish_greeting 'Hello there !'
     hyprctl splash
     # Commands to run in interactive sessions can go here
 end
@@ -29,4 +30,3 @@ alias connect.sh="Cours/4A/devsecops/connect.sh"
 
 # Created by `pipx` on 2025-03-05 21:21:47
 set PATH $PATH /home/max/.local/bin
-fnm env --use-on-cd | source

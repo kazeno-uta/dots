@@ -101,7 +101,7 @@ hl.bind("SUPER + ALT + slash", hl.dsp.layout("orientationcenter"))
 
 hl.bind("SUPER + M", hl.dsp.layout("addmaster"))
 hl.bind("SUPER + SHIFT + M", hl.dsp.layout("removemaster"))
-hl.bind("SUPER + SHIFT + tab", hl.dsp.workspace.swap_monitors({ monitor1 = "DP-3", monitor2 = "HDMI-A-1" }))
+hl.bind("SUPER + SHIFT + tab", hl.dsp.workspace.swap_monitors({ monitor1 = "eDP-1", monitor2 = "HDMI-A-2" }))
 
 hl.bind(
 	"SUPER + mouse:274",

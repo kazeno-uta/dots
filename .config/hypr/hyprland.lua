@@ -20,7 +20,7 @@ hl.monitor({
 	output = second,
 	mode = "preferred",
 	position = "auto",
-	scale = 1,
+	scale = 1.08,
 	transform = 0,
 })
 hl.monitor({
@@ -432,11 +432,11 @@ local eldenRingUnfocusedRule = hl.window_rule({
 local workspace1OnMainRule = hl.workspace_rule({
 	workspace = "1",
 
-	monitor = main,
+	monitor = "HDMI-A-2",
 })
 
 local workspace2OnSecondaryRule = hl.workspace_rule({
 	workspace = "2",
 
-	monitor = second,
+	monitor = "eDP-1",
 })
