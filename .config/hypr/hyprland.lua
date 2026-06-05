@@ -20,7 +20,7 @@ hl.monitor({
 	output = second,
 	mode = "preferred",
 	position = "auto",
-	scale = 1.08,
+	scale = 1.2,
 	transform = 0,
 })
 hl.monitor({
@@ -349,6 +349,7 @@ local PiPPinAndOpacityRule = hl.window_rule({
 
 	float = true,
 	opacity = "1.0 override",
+	move = "1928 674",
 	pin = true,
 })
 -- PiPPinAndOpacityRule:set_enabled(false)
