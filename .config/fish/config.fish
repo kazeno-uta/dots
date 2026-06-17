@@ -25,7 +25,7 @@ alias :q=exit
 alias nv=nvim
 zoxide init fish | source
 alias cd=z
-alias connect="/opt/cisco/secureclient/bin/vpn connect ssl-vpn1.aau.dk"
+alias connect="2fa -clip aau && expect /home/max/.config/fish/scripts/connect.exp (wl-paste)"
 alias disconnect="/opt/cisco/secureclient/bin/vpn disconnect"
 
 # Created by `pipx` on 2025-03-05 21:21:47

@@ -33,6 +33,8 @@ hl.bind(
 	hl.dsp.exec_cmd("uwsm app -- sh -c 'cliphist list | " .. menu .. " --dmenu -b -I | cliphist decode | wl-copy'")
 )
 
+hl.bind("SUPER + CONTROL + V", hl.dsp.exec_cmd("wl-paste -p"))
+
 hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("pkill waybar && uwsm app -- waybar"))
 
 hl.bind("SUPER + ALT + N", hl.dsp.exec_cmd("uwsm app -- hyprsunset -t 3500"))

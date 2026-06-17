@@ -52,10 +52,11 @@ local menu = "~/.config/hypr/scripts/wofi.sh"
 hl.on("hyprland.start", function()
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("waybar & swww-daemon & swaync")
-	hl.exec_cmd("zen-browser & steam")
+	hl.exec_cmd("zen-browser & obsidian")
 	hl.exec_cmd("vesktop")
 	hl.exec_cmd("udiskie")
 	hl.exec_cmd("deezer-desktop && discord")
+	hl.dsp.window.tag({ tag = "+zen-init", window = "class:zen" })
 
 	hl.exec_cmd("uwsm app -- dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
@@ -378,25 +379,15 @@ hl.window_rule({
 	no_focus = true,
 })
 
-local gamesOn9Rule = hl.window_rule({
-	name = "games-on-9",
+local zenOn1Rule = hl.window_rule({
+	name = "zen-on-1",
 	match = {
-		class = "^(steam_app_\\d+)$",
+		tag = "^(zen-init)$",
 	},
 
-	workspace = "9",
+	workspace = "1",
 })
--- gamesOn9Rule:set_enabled(false)
-
-local steamOn10Rule = hl.window_rule({
-	name = "steam-on-10",
-	match = {
-		class = "^(steam)$",
-	},
-
-	workspace = "10 silent",
-})
--- steamOn10Rule:set_enabled(false)
+-- zenOn1Rule:set_enabled(false)
 
 local discordDeezerOnDiscordRule = hl.window_rule({
 	name = "discord-on-discord",
@@ -406,16 +397,8 @@ local discordDeezerOnDiscordRule = hl.window_rule({
 
 	workspace = "special:discord silent",
 })
+
 -- discordDeezerOnDiscordRule:set_enabled(false)
-
-local eldenRingUnfocusedRule = hl.window_rule({
-	name = "elden-ring-unfocused",
-	match = {
-		title = "^(ELDEN RING NIGHTREIGN)$",
-	},
-
-	render_unfocused = true,
-})
 -- eldenRingUnfocusedRule:set_enabled(false)
 
 -- Layer rules also return a handle.
