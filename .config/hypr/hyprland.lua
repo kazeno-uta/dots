@@ -55,7 +55,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("zen-browser & steam")
 	hl.exec_cmd("vesktop")
 	hl.exec_cmd("udiskie")
-	hl.exec_cmd("/opt/Deezer Discord RPC/deezer-discord-rpc")
+	hl.exec_cmd("/opt/Deezer\\ Discord\\ R	PC/deezer-discord-rpc")
 
 	hl.exec_cmd("uwsm app -- dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
@@ -333,7 +333,7 @@ local floatingUtilsRule = hl.window_rule({
 	-- Float utility windows like popups, tooltips, etc. that don't have a class or title.
 	name = "float-utility-windows",
 	match = {
-		class = "^(.*pavucontrol|blueman-manager|[Tt]hunar|.*Chromium.*|Open Files)$",
+		class = "^(.*pavucontrol|blueman-manager|[Tt]hunar|.*Chromium.*|Open Files|xdg-desktop-portal-gtk)$",
 	},
 
 	float = true,

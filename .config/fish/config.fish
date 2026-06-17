@@ -25,7 +25,9 @@ alias nv=nvim
 zoxide init fish | source
 alias cd=z
 alias maxwell="mpv 'https://www.youtube.com/watch?v=kOG0_qjKWEI' --loop=inf --fs --mute"
-alias connect.sh="Cours/4A/devsecops/connect.sh"
+
+alias connect="2fa -clip aau && expect /home/max/.config/fish/scripts/connect.exp (wl-paste)"
+alias disconnect="/opt/cisco/secureclient/bin/vpn disconnect"
 
 # Created by `pipx` on 2025-03-05 21:21:47
 set PATH $PATH /home/max/.local/bin

@@ -2,7 +2,6 @@ windowId=""
 handle() {
   case $1 in
   openwindow*',9,'*)
-    notify-send "moving zen to workspace 9"
     windowId="${1#*>>}"        # remove 'openwindow>>'
     windowId="${windowId%%,*}" # remove everything after first comma
     hyprctl dispatch 'hl.dsp.window.move({ workspace = "2", follow = false, window = "class:zen" })'    ;;
