@@ -1,5 +1,5 @@
 {
-  "Revision": "0.6.6.2-r219.g5d5f6fb6",
+  "Revision": "0.6.7-r135.gb026e404",
   "Profiles": [
     {
       "Tablet": "Wacom CTL-472",
@@ -54,15 +54,12 @@
         ],
         "AuxButtons": [],
         "MouseButtons": [],
-        "WheelButtons": [],
         "MouseScrollUp": null,
         "MouseScrollDown": null,
-        "ClockwiseRotation": null,
-        "ClockwiseActivationThreshold": 15.0,
-        "CounterClockwiseRotation": null,
-        "CounterClockwiseActivationThreshold": 15.0,
+        "WheelBindings": [],
         "DisablePressure": false,
-        "DisableTilt": false
+        "DisableTilt": false,
+        "EnableDragBindings": false
       }
     },
     {
@@ -159,21 +156,54 @@
           }
         ],
         "AuxButtons": [
-          null,
-          null,
-          null,
-          null
+          {
+            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+            "Settings": [
+              {
+                "Property": "Key",
+                "Value": "E"
+              }
+            ],
+            "Enable": true
+          },
+          {
+            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+            "Settings": [
+              {
+                "Property": "Key",
+                "Value": "LeftControl"
+              }
+            ],
+            "Enable": true
+          },
+          {
+            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+            "Settings": [
+              {
+                "Property": "Key",
+                "Value": "S"
+              }
+            ],
+            "Enable": true
+          },
+          {
+            "Path": "OpenTabletDriver.Desktop.Binding.MultiKeyBinding",
+            "Settings": [
+              {
+                "Property": "Keys",
+                "Value": "Control+Z"
+              }
+            ],
+            "Enable": true
+          }
         ],
         "MouseButtons": [],
-        "WheelButtons": [],
         "MouseScrollUp": null,
         "MouseScrollDown": null,
-        "ClockwiseRotation": null,
-        "ClockwiseActivationThreshold": 15.0,
-        "CounterClockwiseRotation": null,
-        "CounterClockwiseActivationThreshold": 15.0,
+        "WheelBindings": [],
         "DisablePressure": false,
-        "DisableTilt": false
+        "DisableTilt": false,
+        "EnableDragBindings": false
       }
     }
   ],

@@ -17,7 +17,7 @@
 hl.monitor({
 	output = "DP-3",
 	mode = "preferred",
-	position = "0x0",
+	position = "auto",
 	scale = 1,
 	transform = 0,
 })
@@ -25,7 +25,7 @@ hl.monitor({
 hl.monitor({
 	output = "HDMI-A-1",
 	mode = "preferred",
-	position = "auto",
+	position = "0x0",
 	scale = 1,
 	transform = 0,
 	-- mirror = "DP-3"
@@ -55,7 +55,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("zen-browser & steam")
 	hl.exec_cmd("vesktop")
 	hl.exec_cmd("udiskie")
-	hl.exec_cmd("/opt/Deezer\\ Discord\\ R	PC/deezer-discord-rpc")
+	hl.exec_cmd("deezer-desktop")
 
 	hl.exec_cmd("uwsm app -- dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
@@ -89,6 +89,7 @@ hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
 hl.env("GTK_IM_MODULE", "fcitx")
 hl.env("QT_IM_MODULE", "fcitx")
 hl.env("XMODIFIERS", "@im=fcitx")
+hl.env("PROTON_ENABLE_WAYLAND", "1")
 -----------------------
 ----- PERMISSIONS -----
 -----------------------
@@ -184,7 +185,7 @@ hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 -- hl.curve("winOut", { type = "bezier", points = { { 0.3, -0.3 }, { 0, 1 } } })
 
 -- Default springs
-hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
+hl.curve("easy", { type = "spring", mass = 1, stiffness = 265.2633, dampening = 25.8273644 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "border", enabled = true, speed = 5.39, bezier = "easeOutQuint" })
@@ -255,7 +256,6 @@ hl.config({
 		force_default_wallpaper = 2, -- Set to 0 or 1 to disable the anime mascot wallpapers
 		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
 		disable_splash_rendering = false,
-		-- vfr = true,
 		vrr = 2,
 		animate_manual_resizes = true,
 		middle_click_paste = true,
@@ -392,7 +392,7 @@ hl.window_rule({
 local gamesOn9Rule = hl.window_rule({
 	name = "games-on-9",
 	match = {
-		class = "^(steam_app_\\d+)$",
+		class = "^(steam_app_\\d+)$|^(Minecraft\\*.*)$",
 	},
 
 	workspace = "9",

@@ -55,7 +55,7 @@ hl.bind("SUPER + down", hl.dsp.focus({ direction = "down" }))
 hl.bind("SUPER + e", hl.dsp.focus({ direction = "left" }))
 hl.bind("SUPER + r", hl.dsp.focus({ direction = "right" }))
 hl.bind("SUPER + f", hl.dsp.focus({ direction = "up" }))
-hl.bind("SUPER + a", hl.dsp.focus({ direction = "down" }))
+hl.bind("SUPER + i", hl.dsp.focus({ direction = "down" }))
 
 for i = 1, 10 do
 	local key = i % 10 -- 10 maps to key 0
